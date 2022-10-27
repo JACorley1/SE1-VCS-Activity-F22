@@ -20,6 +20,9 @@ public class Dragon {
 	}
 
 	public void setWingSpan(int wingSpan) {
+		if (wingSpan <= 0 ) {
+			throw new IllegalArgumentException("Wing Span cannot be less than 1.");
+		}
 		this.wingSpan = wingSpan;
 	}
 
