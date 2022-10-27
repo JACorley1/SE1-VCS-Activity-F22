@@ -28,4 +28,18 @@ class TestConstructor {
 			new Pig("Pink", 50);
 	});
 
-}}
+
+}
+
+	
+	
+	@Test
+	void testSuccessfulPig() {
+		Pig newPig = new Pig("Pink", 12);
+		String pigColor = newPig.getColor();
+		int pigAge = newPig.getAge();
+		
+		assertEquals(pigColor, newPig.getColor());
+		assertEquals(pigAge, newPig.getAge());
+	}}
+
