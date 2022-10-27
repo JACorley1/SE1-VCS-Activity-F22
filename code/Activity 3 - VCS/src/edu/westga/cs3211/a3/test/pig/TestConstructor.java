@@ -7,8 +7,23 @@ import org.junit.jupiter.api.Test;
 class TestConstructor {
 
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	void testEmptyColor() {
+		assertThrows(IllegalArgumentException.class, ()->{
+				new Pig("", 7);
+		});
 	}
+	
+	@Test
+	void testNegativeAge() {
+		assertThrows(IllegalArgumentException.class, ()->{
+			new Pig("Pink", -5);
+	});
+	}
+	
+	@Test
+	void testInvalidAge() {
+		assertThrows(IllegalArgumentException.class, ()->{
+			new Pig("Pink", 50);
+	});
 
 }
