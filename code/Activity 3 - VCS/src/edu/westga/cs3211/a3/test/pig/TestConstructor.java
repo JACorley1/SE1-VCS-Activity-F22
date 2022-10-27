@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import edu.westga.cs3211.a3.model.Pig;
+
 class TestConstructor {
 
 	@Test
@@ -26,4 +28,4 @@ class TestConstructor {
 			new Pig("Pink", 50);
 	});
 
-}
+}}
