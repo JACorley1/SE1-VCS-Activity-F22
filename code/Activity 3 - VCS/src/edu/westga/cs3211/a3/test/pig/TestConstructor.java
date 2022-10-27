@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import edu.westga.cs3211.a3.model.Pig;
+
 class TestConstructor {
 
 	@Test
@@ -25,5 +27,15 @@ class TestConstructor {
 		assertThrows(IllegalArgumentException.class, ()->{
 			new Pig("Pink", 50);
 	});
-
+	}
+	
+	@Test
+	void testSuccessfulPig() {
+		Pig newPig = new Pig("Pink", 12);
+		String pigColor = newPig.getColor();
+		int pigAge = newPig.getAge();
+		
+		assertEquals(pigColor, newPig.getColor());
+		assertEquals(pigAge, newPig.getAge());
+	}
 }
