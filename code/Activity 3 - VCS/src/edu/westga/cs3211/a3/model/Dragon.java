@@ -8,8 +8,8 @@ public class Dragon {
 	public final int MIN_WING_SPAN = 10;
 	
 	public Dragon(int wingSpan, boolean breathesFire) {
-		if (wingSpan <= 0 ) {
-			throw new IllegalArgumentException("Wing Span cannot be less than 1.");
+		if (wingSpan < 0 ) {
+			throw new IllegalArgumentException("Wing Span cannot be less than 0.");
 		}
 		this.wingSpan = wingSpan;
 		this.breathesFire = breathesFire;
@@ -19,19 +19,8 @@ public class Dragon {
 		return this.wingSpan;
 	}
 
-	public void setWingSpan(int wingSpan) {
-		if (wingSpan <= 0 ) {
-			throw new IllegalArgumentException("Wing Span cannot be less than 1.");
-		}
-		this.wingSpan = wingSpan;
-	}
-
 	public boolean isBreathesFire() {
 		return this.breathesFire;
-	}
-
-	public void setBreathesFire(boolean breathesFire) {
-		this.breathesFire = breathesFire;
 	}
 	
 	public boolean fly() {
